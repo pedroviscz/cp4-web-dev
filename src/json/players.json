@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Andressa Alves",
+    "position": "Meio-campo",
+    "club": "Corinthians",
+    "photo": "https://example.com/andressa.jpg",
+    "goals": 15,
+    "assists": 10,
+    "games": 28,
+    "favorite": false
+  },
+  {
+    "name": "Dayana Rodríguez",
+    "position": "Meio-campo",
+    "club": "Corinthians",
+    "photo": "https://example.com/dayana.jpg",
+    "goals": 5,
+    "assists": 12,
+    "games": 30,
+    "favorite": false
+  },
+  {
+    "name": "Mariza",
+    "position": "Zagueira",
+    "club": "Corinthians",
+    "photo": "https://example.com/mariza.jpg",
+    "goals": 2,
+    "assists": 1,
+    "games": 32,
+    "favorite": false
+  },
+  {
+    "name": "Thaís Regina",
+    "position": "Zagueira",
+    "club": "Corinthians",
+    "photo": "https://example.com/thais.jpg",
+    "goals": 1,
+    "assists": 2,
+    "games": 25,
+    "favorite": false
+  },
+  {
+    "name": "Letícia Teles",
+    "position": "Zagueira",
+    "club": "Corinthians",
+    "photo": "https://example.com/leticia.jpg",
+    "goals": 0,
+    "assists": 0,
+    "games": 18,
+    "favorite": false
+  }
+]
