@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=TASA+Explorer:wght@400..800&display=swap');
+
+@font-face {
+  font-family: 'DIN Condensed';
+  src: url('../assets/fonts/645-font.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+html {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  font-family: 'DIN Condensed', 'TASA Explorer';
+}
+
+#playerlist {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 45vh);
+  gap: 3px;
+}
+
+.playercard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #111111;
+  mask-image: url('../assets/svgs/maskcard.svg');
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-image: url('../assets/svgs/maskcard.svg');
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  aspect-ratio: 285 / 400;
+  padding-bottom: 15%;
+}
+
+.playercard img {
+  width: 50%;
+}
+
+.playercard span {
+  text-align: center;
+}
+
+.name {
+  color: white;
+  font-size: 1.1em;
+}
+
+.club {
+  margin-bottom: 2%;
+  font-size: .85em;
+  color: rgb(209, 209, 209);
+}
+
+.top-left {
+  width: 10%;
+  position: absolute;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  align-items: center;
+  top: 15%;
+  left: 20%;
+}
+
+.position {
+  color: white;
+}
+
+.star-button {
+  background: transparent;
+  border: none;
+}
+
+.star-button:hover {
+  cursor: pointer;
+}
+
+.starButton img {
+  width: 100px;
+}
+
+.playercard .stat {
+  font-size: .87em;
+}
+
+.stats {
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 70%;
+  justify-content: center;
+}
+
+.stat {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat span {
+  text-transform: uppercase;
+}
