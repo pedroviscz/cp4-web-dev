@@ -1,40 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/styles/styles.css" />
-    <title>CRUD de Jogadoras</title>
-  </head>
 
-  <body>
-    <div id="playerlist">
-      <div class="playercard">
-        <img src="src/assets/img/playerphoto.png" alt="" />
-        <div class="top-left">
-          <span class="position">ATA</span>
-          <button class="star-button">
-            <img src="src/assets/img/icons8-estrela-100.png" alt="" />
-          </button>
-        </div>
-        <span class="name">Marta</span>
-        <span class="club">Orlando City</span>
-        <div class="stats">
-          <div class="stat">
-            <span>Gols</span>
-            <span>-</span>
-          </div>
-          <div class="stat">
-            <span>Assist.</span>
-            <span>-</span>
-          </div>
-          <div class="stat">
-            <span>Jogos</span>
-            <span>-</span>
-          </div>
-        </div>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="src/styles/styles.css" />
+  <title>CRUD de Jogadoras</title>
+</head>
+
+<body>
+  <div class="container-form">
+    <h2>Cadastro de Jogadora</h2>
+    <form id="playerForm">
+      <input type="hidden" id="playerIndex" />
+
+      <label>Nome:</label>
+      <input type="text" id="name" required />
+
+      <label>Posição:</label>
+      <input type="text" id="position" required />
+
+      <label>Clube:</label>
+      <input type="text" id="club" required />
+
+      <label>Foto (URL):</label>
+      <input type="url" id="photo" required />
+
+      <label>Gols:</label>
+      <input type="number" id="goals" required />
+
+      <label>Assistências:</label>
+      <input type="number" id="assists" required />
+
+      <label>Jogos:</label>
+      <input type="number" id="games" required />
+
+      <button type="submit">Salvar Jogadora</button>
+    </form>
+  </div>
+
+  <div id="playerlist">
+    <div class="playercard">
     </div>
-    <script src="src/js/script.js"></script>
-  </body>
+  </div>
+  <script src="src/js/script.js"></script>
+</body>
+
 </html>

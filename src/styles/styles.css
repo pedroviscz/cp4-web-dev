@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=TASA+Explorer:wght@400..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=TASA+Explorer:wght@400..800&display=swap");
 
 @font-face {
-  font-family: 'DIN Condensed';
-  src: url('../assets/fonts/645-font.otf') format('opentype');
+  font-family: "DIN Condensed";
+  src: url("../assets/fonts/645-font.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -25,11 +25,10 @@ html {
 
 body {
   width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   padding: 0 5%;
-  font-family: 'DIN Condensed', 'TASA Explorer';
+  font-family: "DIN Condensed", "TASA Explorer";
 }
 
 #playerlist {
@@ -49,11 +48,11 @@ body {
   width: 100%;
   height: 100%;
   background-color: #111111;
-  mask-image: url('../assets/svgs/maskcard.svg');
+  mask-image: url("../assets/svgs/maskcard.svg");
   mask-size: contain;
   mask-repeat: no-repeat;
   mask-position: center;
-  -webkit-mask-image: url('../assets/svgs/maskcard.svg');
+  -webkit-mask-image: url("../assets/svgs/maskcard.svg");
   -webkit-mask-size: contain;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -76,7 +75,7 @@ body {
 
 .club {
   margin-bottom: 2%;
-  font-size: .85em;
+  font-size: 0.85em;
   color: rgb(209, 209, 209);
 }
 
@@ -109,7 +108,7 @@ body {
 }
 
 .playercard .stat {
-  font-size: .87em;
+  font-size: 0.87em;
 }
 
 .stats {
@@ -129,4 +128,70 @@ body {
 
 .stat span {
   text-transform: uppercase;
+}
+
+.container-form {
+  text-align: center;
+  margin: 0 20px 0 0;
+}
+
+form#playerForm {
+  width: 100%;
+  max-width: 500px;
+  margin: 10px auto;
+  padding: 20px;
+  background: #1a1a1a;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: white;
+  font-family: "DIN Condensed", "TASA Explorer";
+}
+
+form#playerForm label {
+  font-size: 0.9em;
+  color: #d1d1d1;
+}
+
+form#playerForm input {
+  padding: 8px 10px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  font-size: 0.9em;
+  background: #2a2a2a;
+  color: white;
+}
+
+form#playerForm input:focus {
+  border: 1px solid #00c896;
+  background: #333;
+}
+
+/* botão de salvar (create/update) */
+form#playerForm button {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: #00c896;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+form#playerForm button:hover {
+  background: #00e0ab;
+}
+
+.playercard button[data-action="edit"],
+.playercard button[data-action="delete"] {
+  margin-top: 8px;
+  border: none;
+  background-color: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
 }
