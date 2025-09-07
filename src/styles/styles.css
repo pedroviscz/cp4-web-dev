@@ -132,7 +132,7 @@ body {
 
 .container-form {
   text-align: center;
-  margin: 0 20px 0 0;
+  margin: 10px 20px 0 0;
 }
 
 form#playerForm {
@@ -154,8 +154,14 @@ form#playerForm label {
   color: #d1d1d1;
 }
 
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 form#playerForm input {
-  padding: 8px 10px;
+  padding: 6px 8px;
   border: none;
   border-radius: 6px;
   outline: none;
