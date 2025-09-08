@@ -7,9 +7,9 @@
 ---
 
 ## 📋 Descrição do Projeto
-Este é um sistema web para o **cadastro de jogadoras de futebol feminino**, desenvolvido como parte do **Chapter 4 de Web Development**.  
+Este é um sistema web para o **cadastro de jogadoras de futebol feminino**, desenvolvido como parte do **Checkpoint 4 de Web Development**.  
 
-A aplicação permite realizar as operações básicas de um **CRUD (Create, Read, Update, Delete)**, além de uma funcionalidade extra para **favoritar jogadoras**.
+A aplicação permite realizar as operações básicas de um **CRUD (Create, Read, Update, Delete)**, além de uma para **favoritar jogadoras**.
 
 ---
 
