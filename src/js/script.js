@@ -1,7 +1,6 @@
 const POSITIONS_MAP = {
   Goleiro: "GOL",
   Zagueira: "ZAG",
-  Zagueiro: "ZAG",
   "Lateral Direito": "LD",
   "Lateral Esquerdo": "LE",
   Volante: "VOL",
@@ -14,7 +13,7 @@ const POSITIONS_MAP = {
   "Ponta Esquerda": "PE",
   "Segundo Atacante": "SA",
   Atacante: "ATA",
-  Centroavante: "ATA"
+  Centroavante: "ATA",
 };
 
 const savePlayers = (key, value) =>
@@ -134,14 +133,6 @@ const createPlayer = (playerData) => {
   alert("Jogadora adicionada com sucesso!");
 };
 
-const updatePlayer = (index, updatedData) => {
-  let players = JSON.parse(localStorage.getItem("players"));
-  players[index] = { ...players[index], ...updatedData };
-  savePlayers("players", players);
-  displayPlayers();
-  alert("Jogadora editada com sucesso!");
-};
-
 document.getElementById("playerForm").addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -160,6 +151,27 @@ document.getElementById("playerForm").addEventListener("submit", (e) => {
   e.target.reset();
 });
 
+const updatePlayer = (index) => {
+  let players = JSON.parse(localStorage.getItem("players"));
+
+  const player = players[index];
+
+  player.name = prompt("Edite o nome:", player.name);
+  player.position = prompt("Edite a posição:", player.position);
+  player.club = prompt("Edite o clube:", player.club);
+  player.photo = prompt("Edite a URL da foto:", player.photo);
+  player.goals = Number(prompt("Edite os gols:", player.goals));
+  player.assists = Number(prompt("Edite as assistências:", player.assists));
+  player.games = Number(prompt("Edite os jogos:", player.games));
+
+  // atualiza no LocalStorage
+  savePlayers("players", players);
+
+  // Atualiza a tela
+  displayPlayers();
+  alert("Jogadora editada com sucesso!");
+};
+
 const deletePlayer = (index) => {
   let players = JSON.parse(localStorage.getItem("players"));
   players.splice(index, 1);
@@ -177,8 +189,7 @@ function handlePlayerListClick(event) {
   const actions = {
     favorite: favoritePlayer,
     edit: (i) => {
-      const newName = prompt("Novo nome da jogadora:");
-      if (newName) updatePlayer(i, { name: newName });
+      updatePlayer(i);
     },
     delete: deletePlayer,
   };
